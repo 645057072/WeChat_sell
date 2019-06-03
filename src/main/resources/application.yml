@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.182.135:3306/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+
+  redis:
+    host: 192.168.182.135
+    port: 6379
+
+server:
+  servlet:
+    context-path: /sell
+  port: 8082
+#logging:
+#    pattern:
+#      console: "%d - %msg%n"
+##    path: /var/loal/tomcat/
+#    file: /var/loal/tomcat/sell.log
+wechat:
+  mpAppId: wxb8f9ce1b89f001bb
+  mpAppSecret: b0ea56de1136da46a05fa63e47d872a6
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+  mchId: 1483469312
+  mchKey: 06C56A89949D617xxxxxxxxxxx
+  keyPath: /var/weixin_cert/h5.p12
+#  微信支付异步通知地址
+  notifyUrl: http://hlx.nat100.top/sell/pay/notify
+
+projecturls:
+  wxMpAuthorsizeUrl: http//:127.0.0.1:8082
+  wxOpenAuthorsizeUrl: http//:127.0.0.1:8082
+  sell: http://127.0.0.1:8082
